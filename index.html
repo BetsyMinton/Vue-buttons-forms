@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css">
+	<title>Vue Buttons</title>
+</head>
+<body>
+		<div id="app">
+	<h1>Hello</h1>
+<h2>What is your name?</h2>
+<input v-model="firstName" placeholder="type name">
+ <p>Let's write a story {{ firstName }}</p>
+<input v-model="nounOne" placeholder="noun">
+<input v-model="nounTwo" placeholder="noun">
+<input v-model="adjectiveOne" placeholder="adjective">
+<input v-model="adjectiveTwo" placeholder="adjective">
+<input v-model="verbOne" placeholder="verb">
+<button v-on:click="submitForm = !submitForm">Create Story</button>
+<p v-if="submitForm">I have a pet {{ nounOne }}. My {{ nounOne }} is very {{ adjectiveOne }}.  I love my {{ nounOne }}.  I like to {{ verbOne }} with my {{ nounOne }}. My {{ nounOne }} loves to play with the {{ nounTwo }}. Playing with my {{ nounOne }} and the {{ nounTwo }} is {{ adjectiveTwo }}. </p>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="main.js"></script>
+</body>
+</html>
